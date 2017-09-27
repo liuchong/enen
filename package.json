@@ -1,6 +1,6 @@
 {
   "name": "enen",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Just noop...(嗯嗯 in chinese)",
   "main": "noop.js",
   "scripts": {
