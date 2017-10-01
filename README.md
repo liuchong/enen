@@ -11,7 +11,7 @@ Just a noop ^_^
 
 ## Usage
 
-Please refer to [noop.test.js](https://github.com/liuchong/enen/blob/master/noop.test.js)
+Please refer to [noop.test.js](https://github.com/liuchong/enen/blob/master/noop.test.js) AND [noopWrapper.test.js](https://github.com/liuchong/enen/blob/master/noopWrapper.test.js)
 
 ## License
 
