@@ -18,7 +18,6 @@ Please refer to [noop.test.js](https://github.com/liuchong/enen/blob/master/noop
 
 ## License
 
-  [MIT](LICENSE)
-
+[MIT](LICENSE)
 
 [![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fliuchong%2Fenen.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fliuchong%2Fenen?ref=badge_large)

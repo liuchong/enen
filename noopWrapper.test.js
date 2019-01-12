@@ -9,21 +9,21 @@ describe('The basic functions of noopWrapper', () => {
     noop = wrapper()
   })
 
-  test('should return undefined when direct call noop', () => {
+  it('should return undefined when direct call noop', () => {
     expect(noop()).toBeUndefined()
   })
 
-  test('should return undefined when call noop with argument(s)', () => {
+  it('should return undefined when call noop with argument(s)', () => {
     expect(noop(1)).toBeUndefined()
     expect(noop(9, null, {}, 'what ever')).toBeUndefined()
   })
 
-  test('should return undefined when call noop.f/noop.f.g', () => {
+  it('should return undefined when call noop.f/noop.f.g', () => {
     expect(noop.f(2)).toBeUndefined()
     expect(noop.f.g()).toBeUndefined()
   })
 
-  test('should NOT get same noop object by point operation', () => {
+  it('should NOT get same noop object by point operation', () => {
     expect(noop.f).not.toBe(noop)
     expect(noop.f.g).not.toBe(noop)
   })
@@ -41,7 +41,7 @@ describe('The basic functions of noopWrapper', () => {
       noop = wrapper(obj)
     })
 
-    test('should not affect old primitive attributes', () => {
+    it('should not affect old primitive attributes', () => {
       expect(noop.n).toBe(n)
       expect(noop.s).toBe(s)
       expect(noop.b).toBe(b)
@@ -51,7 +51,7 @@ describe('The basic functions of noopWrapper', () => {
   })
 
   describe('When attributes are added', () => {
-    test('should keep returning undefined when called', () => {
+    it('should keep returning undefined when called', () => {
       const obj = {}
       noop.f = () => {
         return obj
@@ -59,7 +59,7 @@ describe('The basic functions of noopWrapper', () => {
       expect(noop.f()).toBe(obj)
     })
 
-    test('should keep make side effect after set as attribute', () => {
+    it('should keep make side effect after set as attribute', () => {
       let tag
       function f () {
         tag = 'f'
@@ -75,7 +75,7 @@ describe('The basic functions of noopWrapper', () => {
       expect(tag).toBe('g')
     })
 
-    test('should keep what it is when a primitive attribute is set', () => {
+    it('should keep what it is when a primitive attribute is set', () => {
       const n = 1
       noop.n = n
       expect(noop.n).toBe(n)
@@ -84,7 +84,7 @@ describe('The basic functions of noopWrapper', () => {
       expect(noop.s).toBe(s)
     })
 
-    test('should wrap new added attribute which is a function or an object', () => {
+    it('should wrap new added attribute which is a function or an object', () => {
       const o = {}
       function f () {}
       noop.o = o
